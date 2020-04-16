@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func getDataFromFile(_ fileName:String){
+        let path = Bundle.main.path(forResource: "nameOfYourFile", ofType: ".json")
+        if let path = path {
+          let url = URL(fileURLWithPath: path)
+          print(url)
+        }
+    }
+
 
 
 }
