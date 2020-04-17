@@ -25,7 +25,7 @@ class MovieCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(_ movie: FilmEntry) {
+    func configure(_ movie: FilmEntryCodable) {
         self.nameLabel.text = movie.title
         }
     
