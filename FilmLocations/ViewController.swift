@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
     let table: UITableView = {
        let table = UITableView()
        table.translatesAutoresizingMaskIntoConstraints = false
-       table.rowHeight = 100
+       table.rowHeight = 200
        return table
     }()
     

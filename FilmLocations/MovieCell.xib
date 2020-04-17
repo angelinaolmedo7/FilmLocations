@@ -9,32 +9,54 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MovieCell" customModule="FilmLocations" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="MovieCell" customModule="FilmLocations" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-HH-HV0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-HH-HV0">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="200"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujm-sC-O1L" userLabel="ActorLAbel">
+                        <rect key="frame" x="128" y="0.0" width="192" height="100"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0c-nf-IKQ">
+                        <rect key="frame" x="128" y="100" width="176" height="89"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ujm-sC-O1L" firstAttribute="leading" secondItem="zFM-HH-HV0" secondAttribute="trailing" id="66F-bl-aH7"/>
                     <constraint firstItem="zFM-HH-HV0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Add-zg-p2o"/>
+                    <constraint firstItem="ujm-sC-O1L" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="EWt-vz-wdG"/>
                     <constraint firstAttribute="bottom" secondItem="zFM-HH-HV0" secondAttribute="bottom" id="HiN-NG-rbP"/>
-                    <constraint firstAttribute="trailing" secondItem="zFM-HH-HV0" secondAttribute="trailing" id="gha-ny-3zE"/>
+                    <constraint firstItem="zFM-HH-HV0" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="Kt6-Ql-rjE"/>
+                    <constraint firstItem="b0c-nf-IKQ" firstAttribute="top" secondItem="ujm-sC-O1L" secondAttribute="bottom" id="OVK-oy-hcY"/>
+                    <constraint firstAttribute="trailing" secondItem="ujm-sC-O1L" secondAttribute="trailing" id="Rag-M9-rlK"/>
+                    <constraint firstItem="b0c-nf-IKQ" firstAttribute="leading" secondItem="zFM-HH-HV0" secondAttribute="trailing" id="dmo-LG-cNr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="b0c-nf-IKQ" secondAttribute="trailing" id="fRb-Pw-y2D"/>
                     <constraint firstItem="zFM-HH-HV0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="o2o-Xt-MMx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="b0c-nf-IKQ" secondAttribute="bottom" id="t85-UG-Fr4"/>
+                    <constraint firstItem="ujm-sC-O1L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xTb-dV-UAg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="locationLabel" destination="b0c-nf-IKQ" id="wTe-tm-7mk"/>
                 <outlet property="nameLabel" destination="zFM-HH-HV0" id="vFk-dS-IWx"/>
+                <outlet property="starringLabel" destination="ujm-sC-O1L" id="cV8-iT-OI9"/>
             </connections>
-            <point key="canvasLocation" x="139" y="143"/>
+            <point key="canvasLocation" x="137.68115942028987" y="194.86607142857142"/>
         </tableViewCell>
     </objects>
 </document>

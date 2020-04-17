@@ -11,6 +11,8 @@ import UIKit
 class MovieCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var starringLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     static let identifier = "MovieCell"
     
@@ -26,7 +28,9 @@ class MovieCell: UITableViewCell {
     }
     
     func configure(_ movie: FilmEntryCodable) {
-        self.nameLabel.text = movie.title
+        self.nameLabel.text = "\(movie.title) (\(movie.releaseYear.value))"
+        self.starringLabel.text = "Starring: \(movie.firstActor)"
+        self.locationLabel.text = movie.locations
         }
     
         static var nib: UINib {
